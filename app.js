@@ -8,7 +8,6 @@ let tempdisp5 = document.querySelector("#f");
 let dispname = document.querySelector("p");
 let hourhead = document.querySelector(".hour_head");
 
-// Hourly boxes
 let a1 = document.querySelector("#a1");
 let b1 = document.querySelector("#b1");
 let c1 = document.querySelector("#c1");
@@ -81,11 +80,9 @@ const start = async () => {
     let response = await fetch(url);
     data = await response.json();
 
-    // Current temperature
     tempdisp.innerText = `${data.current_weather.temperature} °C`;
     tempdisp1.innerHTML = `Current: ${data.current_weather.temperature} °C<br>Min: ${data.daily.temperature_2m_min[0]} °C<br>Max: ${data.daily.temperature_2m_max[0]} °C`;
 
-    // Weather info
     let wet_code = data.daily.weathercode[0];
     if (wet_code == 0) {
         tempdisp2.innerText = "Clear sky";
@@ -96,11 +93,9 @@ const start = async () => {
     }
     tempdisp3.innerHTML = `Sunrise at ${data.daily.sunrise[0]}<br>Sunset at ${data.daily.sunset[0]}`;
 
-    // Wind info
     tempdisp4.innerText = `${data.current_weather.windspeed} km/h`;
     tempdisp5.innerHTML = `Wind Direction: ${data.current_weather.winddirection}°<br>Max Wind Speed: ${data.daily.wind_speed_10m_max[0]} km/h`;
 
-    // Hourly temperatures
     let temps = data.hourly.temperature_2m;
     let hourlyBoxes = [a1,b1,c1,d1,e1,f1,g1,h1,i1,j1,k1,l1,m1,n1,o1,p1,q1,r1,s1,t1,u1,v1,w1,x1];
     for(let i=0; i<24; i++){
@@ -108,7 +103,6 @@ const start = async () => {
     }
 }
 
-// Load default
 window.addEventListener("load", () => {
     city = "Bhubaneswar";
     main();
