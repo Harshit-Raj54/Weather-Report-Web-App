@@ -1,0 +1,194 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, #87ceeb, #e0f7fa);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 95%;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Search (back to top-right) */
+.search_disp {
+    display: flex;
+    justify-content: flex-end; /* top-right */
+    margin-bottom: 10px;
+}
+
+.search_disp input {
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 250px;
+}
+
+.search_disp button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    background-color: #00796b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search_disp button:hover {
+    background-color: #004d40;
+}
+
+.span1 {
+    text-align: right; /* error message stays top-right */
+    margin-bottom: 10px;
+}
+
+span#error_msg {
+    color: red;
+    font-size: 0.9rem;
+}
+
+/* City Name Display */
+.disp_city {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.disp_city p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Main Boxes */
+.display {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* space between boxes */
+    margin-bottom: 20px;
+}
+
+.box1, .box2, .box3 {
+    flex: 1 1 30%;
+    min-width: 280px;
+    background-color: #004d40;
+    color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical center */
+    align-items: center;     /* horizontal center */
+    min-height: 200px; /* fixed min-height to prevent jump */
+    text-align: center; /* center text inside */
+}
+
+.box1_1 {
+    background-color: #00796b;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+.box1_2 {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.3rem;
+    background-color: rgba(0, 77, 64, 0.8);
+    width: 100%;
+}
+
+.box1_3 {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center; /* center hourly / weather text */
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Adjust specific boxes font size */
+#c {
+    font-size: 16px;
+    padding: 5px 0 5px 12px;
+    height: 38px;
+    width: 95%;
+}
+
+#e {
+    font-size: 1.5rem;
+}
+
+/* Hourly Forecast */
+.hour_temp {
+    margin-top: 20px;
+}
+
+.hour_head {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.hour_time, .hour_time_ans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* center all time boxes */
+    gap: 5px; 
+    min-height: 80px; /* fixed height to prevent jump */
+    margin-bottom: 10px;
+}
+
+.time_box {
+    background-color: #00796b;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 10px;
+    flex: 1 1 4%;
+    font-size: 0.8rem;
+    min-width: 40px;
+    display: flex;
+    justify-content: center; /* center content inside each box */
+    align-items: center;
+}
+
+/* Scrollbar for box1_3 */
+.box1_3::-webkit-scrollbar {
+    width: 6px;
+}
+
+.box1_3::-webkit-scrollbar-thumb {
+    background-color: #00796b;
+    border-radius: 3px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    .display {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
