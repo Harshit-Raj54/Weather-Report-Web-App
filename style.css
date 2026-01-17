@@ -1,4 +1,3 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -23,10 +22,9 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Search (back to top-right) */
 .search_disp {
     display: flex;
-    justify-content: flex-end; /* top-right */
+    justify-content: flex-end;
     margin-bottom: 10px;
 }
 
@@ -55,7 +53,7 @@ body {
 }
 
 .span1 {
-    text-align: right; /* error message stays top-right */
+    text-align: right;
     margin-bottom: 10px;
 }
 
@@ -64,7 +62,6 @@ span#error_msg {
     font-size: 0.9rem;
 }
 
-/* City Name Display */
 .disp_city {
     text-align: center;
     margin-bottom: 20px;
@@ -75,12 +72,11 @@ span#error_msg {
     font-weight: bold;
 }
 
-/* Main Boxes */
 .display {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px; /* space between boxes */
+    gap: 20px;
     margin-bottom: 20px;
 }
 
@@ -93,10 +89,10 @@ span#error_msg {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* vertical center */
-    align-items: center;     /* horizontal center */
-    min-height: 200px; /* fixed min-height to prevent jump */
-    text-align: center; /* center text inside */
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    text-align: center;
 }
 
 .box1_1 {
@@ -122,13 +118,12 @@ span#error_msg {
     font-size: 1rem;
     overflow-y: auto;
     display: flex;
-    justify-content: center; /* center hourly / weather text */
+    justify-content: center;
     align-items: center;
     text-align: center;
     width: 100%;
 }
 
-/* Adjust specific boxes font size */
 #c {
     font-size: 16px;
     padding: 5px 0 5px 12px;
@@ -140,7 +135,6 @@ span#error_msg {
     font-size: 1.5rem;
 }
 
-/* Hourly Forecast */
 .hour_temp {
     margin-top: 20px;
 }
@@ -155,9 +149,9 @@ span#error_msg {
 .hour_time, .hour_time_ans {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* center all time boxes */
+    justify-content: center;
     gap: 5px; 
-    min-height: 80px; /* fixed height to prevent jump */
+    min-height: 80px; 
     margin-bottom: 10px;
 }
 
@@ -171,11 +165,10 @@ span#error_msg {
     font-size: 0.8rem;
     min-width: 40px;
     display: flex;
-    justify-content: center; /* center content inside each box */
+    justify-content: center;
     align-items: center;
 }
 
-/* Scrollbar for box1_3 */
 .box1_3::-webkit-scrollbar {
     width: 6px;
 }
@@ -185,7 +178,6 @@ span#error_msg {
     border-radius: 3px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 800px) {
     .display {
         flex-direction: column;
